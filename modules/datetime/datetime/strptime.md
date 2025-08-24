@@ -1,4 +1,4 @@
-## What Is `datetime.strptime()`?
+# `datetime.strptime()`
 
 The `datetime.strptime()` method is part of Python’s built-in `datetime` module. It converts a string representing a date and/or time into a `datetime` object by using a format string composed of special directives.
 
