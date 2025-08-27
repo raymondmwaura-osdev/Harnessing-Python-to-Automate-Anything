@@ -1,4 +1,4 @@
-#`datetime`
+# `datetime`
 
 The **`datetime` module** is part of Python’s standard library and provides classes and functions for working with dates and times. It enables programs to represent, manipulate, and format temporal data at different levels of precision; from whole days to fractions of a second.
 
