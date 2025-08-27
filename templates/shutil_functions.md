@@ -3,9 +3,7 @@
 ## Key Topics
 
 - [Overview](#overview)
-- [Syntax](#syntax)
-- [Parameters](#parameters)
-- [Return Value](#return-value)
+- [Syntax, Parameters, and Return Value](#syntax-parameters-and-return-value)
 - [Errors and Exceptions](#errors-and-exceptions)
 - [Examples](#examples)
 - [Practical Use Cases](#practical-use-cases)
@@ -21,26 +19,18 @@ Explain what the function does, why it exists, and its conceptual purpose within
 
 ---
 
-## Syntax
+## Syntax, Parameters, and Return Value
 
 ```python
 shutil.function_name(param1, param2, ...)
 ```
 
-* Describe what the syntax looks like.
 * Clarify optional vs required parameters.
-
----
-
-## Parameters
-
-* **param1**: Type, meaning, role, constraints.
-* **param2**: Type, meaning, role, constraints.
+* `param1`: Type, meaning, role, constraints.
+* `param2`: Type, meaning, role, constraints.
 * Note any default values or platform-dependent behavior.
 
----
-
-## Return Value
+**Return Value**:
 
 * Describe the type of return (e.g., string path, None, tuple).
 * Mention if the function returns `dst` path for chaining, or no return value at all.
