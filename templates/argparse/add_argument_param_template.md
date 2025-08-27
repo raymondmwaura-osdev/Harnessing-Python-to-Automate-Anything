@@ -1,9 +1,5 @@
 # `parameter_name`
 
-> **Short Definition**: One-sentence description of what the parameter controls.
-
----
-
 ## Key Topics
 
 - [Overview](#overview)
@@ -17,13 +13,11 @@
 - [Interaction With Other Parameters](#interaction-with-other-parameters)
 - [Best Practices](#best-practices)
 - [Common Pitfalls](#common-pitfalls)
-- [Notes and References](#notes-and-references)
 
 ---
 
 ## Overview
 
-A slightly longer explanation:
 + What this parameter does
 + Why it exists / what problem it solves
 + General behavior and quirks
@@ -96,13 +90,5 @@ Explain how this parameter plays with:
 * Mistakes users often make
 * Subtle differences (e.g., `nargs=1` vs `nargs=None`)
 * Edge cases that trigger errors or confusion
-
----
-
-## Notes and References
-
-* Any quirks not obvious in the docs
-* Links to Python official docs or trusted tutorials
-* Historical notes (e.g., changes in default behavior across Python versions)
 
 ---
