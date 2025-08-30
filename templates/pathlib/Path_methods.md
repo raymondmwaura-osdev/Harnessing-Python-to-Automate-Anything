@@ -5,11 +5,9 @@
 + [Overview](#overview)
 + [Syntax, Parameters and Return Value](#syntax-parameters-and-return-value)
 + [Errors and Exceptions](#errors-and-exceptions)
-+ [Behavior and Side Effects](#behavior-and-side-effects)
 + [Examples](#examples)
 + [Best Practices](#best-practices)
 + [Common Pitfalls](#common-pitfalls)
-+ [Related Methods](#related-methods)
 + [Notes](#notes)
 
 ---
@@ -55,14 +53,6 @@ Tabulate each parameter:
 
 ---
 
-## Behavior and Side Effects
-
-* Clarify if the method performs I/O operations.
-* Discuss cross-platform behavior or caveats.
-* For methods like `.resolve()`, mention symlink resolution, absolute path conversion, and related nuances.
-
----
-
 ## Examples
 
 Provide minimal, clear code demonstrating typical usage:
@@ -72,12 +62,6 @@ from pathlib import Path
 
 # Example context and expected result
 ```
-
-Include edge cases such as:
-
-* When the target exists
-* Relative vs. absolute paths
-* Behavior with symbolic links or special files
 
 ---
 
@@ -92,15 +76,6 @@ Include edge cases such as:
 
 * Note frequent mistakes that may cause errors or unexpected results.
 * Warn about platform-specific quirks or overlooked method behaviors.
-
----
-
-## Related Methods
-
-Link to other useful methods, such as:
-
-* For `mkdir`: `.exists()`, `.iterdir()`, `.rmdir()`, `.touch()`
-* For I/O: `.read_text()`, `.write_text()`, `.open()`
 
 ---
 
