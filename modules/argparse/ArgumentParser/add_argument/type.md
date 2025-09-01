@@ -43,7 +43,7 @@ def comma_to_int_list(s: str):
 parser = argparse.ArgumentParser()
 parser.add_argument('--numbers', type=comma_to_int_list)
 args = parser.parse_args()
-print(args.numbers)
+print(args)
 ```
 
 #### Output and Explanation
