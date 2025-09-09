@@ -8,7 +8,6 @@
 + [Examples](#examples)
 + [Best Practices](#best-practices)
 + [Common Pitfalls](#common-pitfalls)
-+ [Notes](#notes)
 
 ---
 
@@ -76,13 +75,5 @@ from pathlib import Path
 
 * Note frequent mistakes that may cause errors or unexpected results.
 * Warn about platform-specific quirks or overlooked method behaviors.
-
----
-
-## Notes
-
-* Mention OS-specific behavior, if any.
-* State version introduction if newly added (e.g., `.lchmod()` on UNIX).
-* Point out deprecations or future enhancements.
 
 ---
