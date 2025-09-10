@@ -22,21 +22,15 @@ Explain what the method does in plain terms and why it exists.
 
 ## Syntax, Parameters, and Return Value
 
-
-**Syntax**:
-
 ```python
 def method_name(parameters) -> return_type
 ```
 
 * State if it is a `@classmethod`, `@staticmethod`, or instance method.
-
-**Parameters**:
-
 * **param1** (`type`, optional/required): description, valid ranges, defaults.
 * **param2** (`type`): etc.
 
-**Return Value**:
+**Return Value**
 
 * Type returned (e.g., `date`, `datetime`, `timedelta`, `str`).
 * Special cases (e.g., may return `None`, raises `ValueError`).
