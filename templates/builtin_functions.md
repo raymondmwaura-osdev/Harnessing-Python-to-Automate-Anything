@@ -11,7 +11,6 @@
 + [Practical Use Cases](#practical-use-cases)
 + [Best Practices](#best-practices)
 + [Common Pitfalls](#common-pitfalls)
-+ [Notes and References](#notes-and-references)
 
 ---
 
@@ -90,12 +89,5 @@ Explain how the function is used in real coding.
 * Misunderstandings and errors (wrong argument type, forgetting optional args).
 * Tricky edge cases.
 * Misuse leading to inefficiency.
-
----
-
-## Notes and References
-
-* Extra details (implementation quirks, Python version changes).
-* Links to official Python docs and trusted resources.
 
 ---
