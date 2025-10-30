@@ -66,3 +66,94 @@ conda install -c conda-forge pytest
 * If you have multiple Python versions installed, ensure you are installing pytest into the correct version (e.g., `python3 -m pip install pytest`).
 
 ---
+
+Here is a continuation of the tutorial on **pytest**: covering its syntax and giving a **simple example**.
+
+---
+
+## Test Syntax Fundamentals
+
+Before diving into more advanced features, it is important to understand the basic syntax rules and conventions that pytest employs.
+
+### File and Function Naming Conventions
+
+* Test files should be named so that pytest will discover them by default. For example, filenames beginning with `test_` or ending with `_test.py`.
+* Within those files, test functions should typically begin with `test_`. For example: `def test_addition(): …`
+* Optionally, tests can be grouped in classes whose names begin with `Test`. The class should not require a base class.
+
+### Writing Assertions
+
+* Unlike some older test frameworks, pytest allows you to use plain `assert` statements for checking expected behaviour.
+* One of pytest’s features is *assertion rewriting*, meaning when an `assert` fails, pytest will often provide rich information about what the expression evaluated to, making diagnosing failure easier.
+* The typical pattern inside a test function is:
+
+  1. Arrange (set up input or context)
+  2. Act (call code under test)
+  3. Assert (check the result); often called the “AAA” pattern.
+
+### Running Tests
+
+* From the command line (in project root), simply running `pytest` will discover and execute tests in suitable files/directories.
+* Optionally, a specific file or even a specific test function can be targeted.
+* The output will show which tests passed or failed, and for failures will show the assertion failure details.
+
+---
+
+## A Simple Example
+
+### Code Under Test
+
+Suppose you have a Python module `calculator.py` with a simple function:
+
+```python
+# calculator.py
+def add(a, b):
+    return a + b
+```
+
+### Test Module
+
+Create a test file named `test_calculator.py` in the same directory (or in a `tests/` directory). In that file:
+
+```python
+# test_calculator.py
+from calculator import add
+
+def test_add_positive_numbers():
+    result = add(2, 3)
+    assert result == 5
+
+def test_add_negative_and_positive():
+    result = add(-1, 4)
+    assert result == 3
+```
+
+### Running the Test
+
+From the command line, run:
+
+```bash
+pytest
+```
+
+You should see pytest discover both test functions (in `test_calculator.py`), execute them, and report something like:
+
+```
+============================= test session starts =============================
+collected 2 items
+
+test_calculator.py ..                                                [100%]
+
+============================== 2 passed in 0.03s ==============================
+```
+
+If, however, one assertion were incorrect (for example `assert result == 4`), pytest would show a failure, and it would display the actual value of `result` and show you what expression failed.
+
+### Interpretation
+
+* Each test function is independent; pytest treats each `test_…` function as a separate test case.
+* Using plain `assert` means you do not need to import a special assertion library; pytest handles introspection.
+* The test output clearly shows which tests passed/failed and provides useful diagnostic information in case of failure.
+* The naming conventions (file name starts with `test_` and function names start with `test_`) allow pytest to pick them up automatically.
+
+---
