@@ -1,6 +1,6 @@
 # `cryptography.hazmat.primitives.hashes`
 
-### Overview
+## Overview
 
 The module `cryptography.hazmat.primitives.hashes` is part of the Python `cryptography` library and provides implementations of **cryptographic hash functions** (also called message-digests). A cryptographic hash function takes an arbitrary block of data and computes a fixed-size digest (a “fingerprint”) such that it is computationally infeasible to find two distinct inputs that yield the same digest (collision resistance), or to produce an input that yields a given digest (preimage resistance).
 Hash functions play a central role in cryptography: for message integrity (detecting changes), for key derivation (stretching passwords), for digital signatures, for random-oracle style constructions, and for fingerprinting data.
@@ -8,7 +8,7 @@ In this module you can perform hashing operations, incremental updates, and obta
 
 ---
 
-### Parameters (in main Hash API)
+## Parameters (in main Hash API)
 
 In the `hashes` module you typically work with the class `Hash` (or `HashContext`). Its constructor takes parameters:
 
@@ -19,14 +19,14 @@ Once constructed you call methods (see below) like `update(data)` and `finalize(
 
 ---
 
-### Return Value
+## Return Value
 
 * The `Hash.finalize()` method returns a `bytes` object representing the digest (hash) of all data that has been supplied via `update()`.
 * After `finalize()` is called, the `Hash` context is finalised and cannot accept further `update()` calls (calling them will raise `AlreadyFinalized`).
 
 ---
 
-### Methods
+## Methods
 
 Here are the primary methods of the `Hash` (or `HashContext`) class in the module:
 
@@ -41,7 +41,7 @@ Additionally, algorithm classes (e.g., `SHA256`, `SHA3_512`, `BLAKE2b`) each def
 
 ---
 
-### Example
+## Example
 
 ```python
 from cryptography.hazmat.primitives import hashes
