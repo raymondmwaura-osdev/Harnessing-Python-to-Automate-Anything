@@ -25,8 +25,6 @@ The `PBKDF2HMAC` class is initialized with several required parameters that cont
 * **Impact:**
   Determines the strength and output length of the derived key material. Stronger algorithms (e.g., SHA256 or SHA512) are recommended.
 
----
-
 ### length
 
 * **Type:** `int`
@@ -35,8 +33,6 @@ The `PBKDF2HMAC` class is initialized with several required parameters that cont
 * **Impact:**
   The derived key will be exactly this many bytes long.
   For example, AES-256 requires a 32-byte (256-bit) key.
-
----
 
 ### salt
 
@@ -48,7 +44,7 @@ The `PBKDF2HMAC` class is initialized with several required parameters that cont
   Prevents precomputed dictionary and rainbow-table attacks.
   Reusing a salt weakens security but does not immediately compromise confidentiality.
 
----
+**Note**: The recommended size for the salt is 16 bytes.
 
 ### iterations
 
@@ -58,8 +54,6 @@ The `PBKDF2HMAC` class is initialized with several required parameters that cont
 * **Impact:**
   Increasing this value slows down both legitimate key derivation and brute-force guessing attacks.
   As of current security recommendations, values of **≥100,000 iterations** are considered minimal, though modern recommendations often exceed **300,000**.
-
----
 
 ### backend
 
@@ -73,8 +67,6 @@ The `PBKDF2HMAC` class is initialized with several required parameters that cont
   ```
 * **Impact:**
   In typical use, this parameter should always be `default_backend()` unless a specific cryptographic backend is required.
-
----
 
 ### Optional Parameters
 
