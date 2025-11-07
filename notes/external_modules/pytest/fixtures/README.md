@@ -1,7 +1,5 @@
 # Fixtures
 
-> **NOTE**: In this directory, the other files discuss individual `@pytest.fixture` parameters (e.g. `scope.md` covers the `scope` parameter).
-
 ## What Are Fixtures
 
 In pytest, a *fixture* is a function that is executed **before** (and optionally after) a test function runs, and whose result (or context) is provided to the test via dependency injection.
