@@ -61,24 +61,3 @@ print("Hello, world!")  # Prints text to the console
 ```
 
 ---
-
-## Best Practices
-
-List guidelines for optimal use.
-
-* Efficiency considerations (e.g., avoid unnecessary calls in loops).
-* Readability and maintainability tips.
-* Compatibility or version considerations.
-* When to prefer this function over alternatives.
-
----
-
-## Common Pitfalls
-
-Describe mistakes frequently made by users.
-
-* Incorrect assumptions about return types or side effects.
-* Misuse of parameters or misunderstanding of defaults.
-* Subtle behavioral quirks or version-dependent behavior.
-
----
