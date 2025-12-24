@@ -43,3 +43,29 @@ def test_function(mocker):
 ```
 
 ---
+
+## `capsys` Fixture
+
+The `capsys` fixture captures stdout and stderr output during test execution.
+
+```python
+def test_print_output(capsys):
+    print("Hello, World!")
+    print("Error message", file=sys.stderr)
+    
+    captured = capsys.readouterr()
+    
+    assert captured.out == "Hello, World!\n"
+    assert captured.err == "Error message\n"
+
+    new_captured = capsys.readouterr()
+    # new_captured.out == ""
+    # new_captured.err == ""
+    # Reading the output clears the capture buffer.
+```
+
++ `capsys.readouterr()` returns a named tuple with `.out` (stdout) and `.err` (stderr).
++ Reading the output clears the capture buffer. Subsequent calls get only new output.
++ `capsys.disabled()` disables capturing. Output will be displayed on the terminal.
+
+**Note**: `capfd` captures output at the file descriptor level.
